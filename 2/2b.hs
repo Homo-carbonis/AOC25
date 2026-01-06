@@ -26,7 +26,6 @@ tok c s = case dropWhile (==c) s of
   "" -> []
   s' -> w : tok c s''
     where
-      (w, s'') =
-        break (==c) s'
+      (w, s'') = break (==c) s'
 
 alleq list = all (== head list) list
